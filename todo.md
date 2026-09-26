@@ -1,1 +1,0 @@
-[] In `packages/c_file_generator.py`, make a customisation option which allows to choose if to hardcode numbers in the print statements directly.

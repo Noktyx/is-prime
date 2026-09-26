@@ -21,5 +21,5 @@ def ask_yes_no(question: str) -> bool:
 		bool: 'True' if the user answered with "y" or "yes", 'False' otherwise.
 	"""
 
-	answer: str = input(question + " (y/N): ").strip().lower()
+	answer: str = input(question + " [y/N]: ").strip().lower()
 	return (answer in ["y", "yes"])
