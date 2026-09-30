@@ -1,7 +1,7 @@
 import subprocess, platform
 
 
-def clear_screen() -> None:
+def clear_terminal() -> None:
 	"""Unsurprisingly, should clear the terminal screen; works on both POSIX and Windows!!1!"""
 
 	command: str = ("clear" if (platform.system() != "Windows") else "cls")
@@ -38,7 +38,7 @@ def ask_file_name(default_name:str="output", extension: str="", invalid_chars:st
 		str: The final file name.
 	"""
 
-	user_file_name: str = input(f"File name (default: {default_name}): ").strip()
+	user_file_name: str = input(f"File name (default: \"{default_name + extension}\"): ").strip()
 
 	if ((user_file_name == "") or (any(char in invalid_chars for char in user_file_name))): #Is user_file_name invalid?
 		print(f"You have provided an empty or invalid name; \"{default_name}\" will be used.")
