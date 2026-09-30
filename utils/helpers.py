@@ -38,10 +38,10 @@ def ask_file_name(default_name:str="output", extension: str="", invalid_chars:st
 		str: The final file name.
 	"""
 
-	user_file_name: str = input(f"File name (default: \"{default_name + extension}\"): ").strip()
+	user_file_name: str = input(f"File name (default: \"{default_name+extension}\"): ").strip()
 
 	if ((user_file_name == "") or (any(char in invalid_chars for char in user_file_name))): #Is user_file_name invalid?
-		print(f"You have provided an empty or invalid name; \"{default_name}\" will be used.")
+		print(f"You have provided an empty or invalid name; defaulting to \"{default_name+extension}\".")
 		user_file_name = default_name
 
 	elif ((extension != "") and (user_file_name.lower().endswith(extension.lower()))): #Is extension present already or not needed? 

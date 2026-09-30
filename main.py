@@ -7,7 +7,7 @@ from utils.helpers import ask_yes_no, ask_file_name, clear_terminal
 
 
 def main() -> bool:
-	DEFAULT_FILE_NAME: Final[str] = random.choice(["homework", "output", "uwu", "furry_gay_porn_video_player_free_novirus"]) #I'm such a corny git, omG
+	DEFAULT_FILE_NAME: Final[str] = random.choice(["homework_resolver", "haxxing_tool", "output", "DONT_OPEN", "master_hacker_stuff", "kali_linux", "uwu", "furry_gay_porn_video_player_free_novirus"]) #this is so corny, omG
 	
 	try:
 		limit: int = int(float(input("Enter the upper limit for prime search: ")))
@@ -31,7 +31,7 @@ def main() -> bool:
 
 
 	except Exception as error:
-		print("Exception raised while attempting to parse your input: ", error)
+		print(f"Exception of type '{type(error).__name__}' raised while attempting to parse your input: {error if str(error) else "No error message was provided."}")
 		return (False)
 
 

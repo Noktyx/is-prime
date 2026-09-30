@@ -1,8 +1,6 @@
 from typing import List
 
 
-# One might argue to go for Euler's sieve, but I personally reckon that, for this use case, Eratosthenes' sieve is better...
-# But, hey, might change idea and implement the former, too; not like it should be *that* hard in Python...
 def sieve_of_eratosthenes(limit: int) -> list:
 	"""Returns a list of all prime numbers from 0 to whatever specified.
 

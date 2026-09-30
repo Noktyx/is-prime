@@ -1,1 +1,3 @@
 __pycache__/
+clean_python_cache.sh
+test/
